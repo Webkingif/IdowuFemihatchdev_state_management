@@ -1,17 +1,25 @@
-// import React from 'react'
+import { useSelector } from 'react-redux'
 import Navbar from './components/Navbar'
 import Login from './components/Login'
 import Sidebar from './components/Sidebar'
 import UserPage from './components/UserPage'
+import type { RootState } from './redux/store'
 
 const App = () => {
+  const isLoggedIn = useSelector((state: RootState) => state.user.isLoggedIn)
+
+  if (!isLoggedIn) {
+    return <Login />
+  }
+
   return (
-    <div className="grid grid-cols-5">
+    <div className="app-shell">
       <Sidebar />
-      <Navbar />
-      <div className="col-span-3 p-4">
-        <UserPage />
-        <Login /> 
+      <div className="workspace">
+        <Navbar />
+        <main id="main-content" className="page-content">
+          <UserPage />
+        </main>
       </div>
     </div>
   )
