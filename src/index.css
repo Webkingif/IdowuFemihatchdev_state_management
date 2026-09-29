@@ -736,7 +736,7 @@ a {
 	background: var(--color-accent-dark);
 }
 
-.primary-button:active {
+.primary-button: {
 	transform: translateY(0);
 }
 

@@ -20,7 +20,6 @@ const UserPage = () => {
           <h1>Welcome, {firstName}.</h1>
           <p className="page-subtitle">Here’s your account at a glance.</p>
         </div>
-        <span className="account-badge"><span className="status-dot" aria-hidden="true" />Signed in</span>
       </div>
 
       <div className="overview-grid">
@@ -61,7 +60,6 @@ const UserPage = () => {
                 <path d="M12 14v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
               </svg>
             </span>
-            <span className="session-state"><span className="status-dot" aria-hidden="true" />Active</span>
           </div>
           <p className="eyebrow eyebrow-light">CURRENT SESSION</p>
           <h2 id="session-heading">You’re all set.</h2>
